@@ -70,7 +70,7 @@
 #define voltagePin   1
 
 #define VER 88
-#define VERSION " MPGuino  v0." + VER1 + "E"
+#define VERSION " MPGuino  v0."// + VER1 + "E"
 #include <avr/interrupt.h>
 #include <avr/pgmspace.h>
 #include <avr/eeprom.h>
@@ -124,8 +124,19 @@ typedef uint8_t byte;
 
 //failsafe !!!
 //#define usedefaults true
-
-
+void displayTripDebug(char * lm1, unsigned long v1, char * lm2, unsigned long v2,
+                      char * lm3, unsigned long v3, char * lm4, unsigned long v4,
+                      char * lm5, unsigned long v5, char * lm6, unsigned long v6,
+                      char * lm7, unsigned long v7, char * lm8, unsigned long v8);
+unsigned long instantrpm(void);
+unsigned long readTemp();
+unsigned long readVcc();
+unsigned long batteryVoltage(void);
+unsigned long pinVoltage(void);
+unsigned long pinVoltage1(void);
+unsigned long batteryVoltageVcc(void);
+unsigned long tankLiters(void);
+unsigned long tankLiters_norm(void);
 void enableLButton();
 void enableMButton();
 void enableRButton();
@@ -188,7 +199,7 @@ void initGuino();
 unsigned long millis2();
 void delay2(unsigned long ms);
 void delayMicroseconds2(unsigned int us);
-
+unsigned long readVcc(void);
 
 void simpletx(char * string);
 unsigned long parms[] = {
@@ -1187,7 +1198,7 @@ unsigned long instantrpm(){
     
 }
 
-unsigned long readTemp() {
+unsigned long readTemp(void) {
     unsigned long result;
     // Read temperature sensor against 1.1V reference
     ADMUX = _BV(REFS1) | _BV(REFS0) | _BV(MUX3);
@@ -1200,7 +1211,7 @@ unsigned long readTemp() {
     return result;
 }
 
-unsigned long readVcc() {
+unsigned long readVcc(void) {
     unsigned long result;
     // Read 1.1V reference against AVcc
     ADMUX = _BV(REFS0) | _BV(MUX3) | _BV(MUX2) | _BV(MUX1);

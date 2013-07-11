@@ -28,7 +28,7 @@
 
 // Sketch
 #include "mpguino_edu.ino"
-
+/*
 // Core library and main()
 #if defined(MPIDE)
 // ====================================================================== chipKIT specific
@@ -325,7 +325,7 @@ int main(void)
 
 #if defined(__SAM3X8E__) 
 // ...................................................................... Arduino 1.5x SAM architecture specific
-
+*/
 /*
  Copyright (c) 2011 Arduino.  All right reserved.
  
@@ -343,10 +343,10 @@ int main(void)
  License along with this library; if not, write to the Free Software
  Foundation, Inc., 51 Franklin St, Fifth Floor, Boston, MA  02110-1301  USA
  */
-
+/*
 #define ARDUINO_MAIN
 #include "Arduino.h"
-
+*/
 /*
  * Cortex-M3 Systick IT handler
  */
@@ -361,6 +361,8 @@ int main(void)
 /*
  * \brief Main entry point of Arduino application
  */
+
+/*
 int main( void )
 {
 	init();
@@ -412,9 +414,9 @@ int main(void)
 
 #endif // Arduino
 
-
-#else // error
-#error Platform not defined
-#endif // end IDE
+*/
+//#else // error
+//#error Platform not defined
+//#endif // end IDE
 #endif // end embedXcode
 

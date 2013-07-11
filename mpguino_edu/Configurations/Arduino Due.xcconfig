@@ -1,0 +1,42 @@
+//
+//  Arduino Due.xcconfig 
+//  Board config file
+//  ----------------------------------
+//  Developed with embedXcode
+//
+//  Project embedXcode18
+//  Created by Rei Vilo on 23/10/12
+//  Copyright © 2012 http://embedxcode.weebly.com
+//  Licence CC = BY SA NC
+//
+// Last update: May 10, 2013 release 49
+
+// Board identifier
+// See Boards.txt for <tag>.name=Arduino Uno (16 MHz)
+//
+BOARD_TAG  = arduino_due_x
+
+// Port (optionnal)
+// most common are /dev/tty.usbserial*, /dev/tty.usbmodem* or /dev/tty.uart*
+//
+BOARD_PORT = /dev/tty.usbserial*
+
+// Warning: some users have reported /dev/cu.usb*
+
+// References for Xcode code-sense
+// See Boards.txt for <tag>.build.mcu=<GCC_PREPROCESSOR_DEFINITIONS>
+//
+GCC_PREPROCESSOR_DEFINITIONS = __SAM3X8E__ ARDUINO
+
+// Specify ARDUINO_APP for Arduino, MPIDE_APP for Mpide,
+//   DIGISPARK_APP for Digispark, ENERGIA_APP for Energia,
+//   MAPLE_APP for MapleIDE, TEENSY_APP for Teensy,
+//   WIRING_APP for Wiring
+//
+HEADER_SEARCH_PATHS = $(ARDUINO_APP)/** $(SKETCHBOOK_DIR)/Libraries/**
+
+// Maximum RAM size in bytes
+// given by <tag>.upload.maximum_ram_size in boards.txt for Maple and Teensy
+//
+MAX_RAM_SIZE = 98304
+

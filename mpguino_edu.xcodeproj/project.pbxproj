@@ -10,6 +10,7 @@
 		A0A7E78A178F319700A1D5E1 /* main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = A0A7E789178F319700A1D5E1 /* main.cpp */; };
 		A0A7E78C178F319700A1D5E1 /* LocalLibrary.cpp in Sources */ = {isa = PBXBuildFile; fileRef = A0A7E78B178F319700A1D5E1 /* LocalLibrary.cpp */; };
 		A0A7E78F178F319700A1D5E1 /* Makefile in Sources */ = {isa = PBXBuildFile; fileRef = A0A7E78E178F319700A1D5E1 /* Makefile */; };
+		A0A7E7F2178F3AA100A1D5E1 /* mpguino_edu.ino in Sources */ = {isa = PBXBuildFile; fileRef = A0A7E7CE178F319800A1D5E1 /* mpguino_edu.ino */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -75,7 +76,7 @@
 		A0A7E7CB178F319800A1D5E1 /* embedXcode_prepare */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.executable"; name = embedXcode_prepare; path = Utilities/embedXcode_prepare; sourceTree = "<group>"; };
 		A0A7E7CC178F319800A1D5E1 /* embedXcode_chrono */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.executable"; name = embedXcode_chrono; path = Utilities/embedXcode_chrono; sourceTree = "<group>"; };
 		A0A7E7CD178F319800A1D5E1 /* TemplateIcon.icns */ = {isa = PBXFileReference; lastKnownFileType = image.icns; name = TemplateIcon.icns; path = Utilities/TemplateIcon.icns; sourceTree = "<group>"; };
-		A0A7E7CE178F319800A1D5E1 /* mpguino_edu.ino */ = {isa = PBXFileReference; lastKnownFileType = text; path = mpguino_edu.ino; sourceTree = "<group>"; };
+		A0A7E7CE178F319800A1D5E1 /* mpguino_edu.ino */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.objcpp; path = mpguino_edu.ino; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.cpp; };
 /* End PBXFileReference section */
 
 /* Begin PBXGroup section */
@@ -396,6 +397,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A0A7E7F2178F3AA100A1D5E1 /* mpguino_edu.ino in Sources */,
 				A0A7E78A178F319700A1D5E1 /* main.cpp in Sources */,
 				A0A7E78C178F319700A1D5E1 /* LocalLibrary.cpp in Sources */,
 				A0A7E78F178F319700A1D5E1 /* Makefile in Sources */,
@@ -407,7 +409,7 @@
 /* Begin XCBuildConfiguration section */
 		A0A7E7CF178F319800A1D5E1 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = A0A7E798178F319700A1D5E1 /* Arduino Uno.xcconfig */;
+			baseConfigurationReference = A0A7E794178F319700A1D5E1 /* Arduino Duemilanove.xcconfig */;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
@@ -429,6 +431,11 @@
 				GCC_WARN_ABOUT_RETURN_TYPE = YES;
 				GCC_WARN_UNINITIALIZED_AUTOS = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
+				HEADER_SEARCH_PATHS = (
+					"$(ARDUINO_APP)/**",
+					"$(SKETCHBOOK_DIR)/libraries/**",
+				);
+				MACOSX_DEPLOYMENT_TARGET = 10.8;
 				PATH = "$(PATH):$(PROJECT_DIR)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKETCHBOOK_DIR = "";
@@ -438,6 +445,7 @@
 		};
 		A0A7E7D0178F319800A1D5E1 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = A0A7E798178F319700A1D5E1 /* Arduino Uno.xcconfig */;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
@@ -452,6 +460,11 @@
 				GCC_WARN_ABOUT_RETURN_TYPE = YES;
 				GCC_WARN_UNINITIALIZED_AUTOS = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
+				HEADER_SEARCH_PATHS = (
+					"$(ARDUINO_APP)/**",
+					"$(SKETCHBOOK_DIR)/libraries/**",
+				);
+				MACOSX_DEPLOYMENT_TARGET = 10.8;
 				PATH = "$(PATH):$(PROJECT_DIR)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKETCHBOOK_DIR = "";
@@ -462,6 +475,7 @@
 		A0A7E7D2178F319800A1D5E1 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Debug;
@@ -469,6 +483,7 @@
 		A0A7E7D3178F319800A1D5E1 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Release;
@@ -476,108 +491,126 @@
 		A0A7E7D5178F319800A1D5E1 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
 			};
 			name = Debug;
 		};
 		A0A7E7D6178F319800A1D5E1 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
 			};
 			name = Release;
 		};
 		A0A7E7D8178F319800A1D5E1 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
 			};
 			name = Debug;
 		};
 		A0A7E7D9178F319800A1D5E1 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
 			};
 			name = Release;
 		};
 		A0A7E7DB178F319800A1D5E1 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
 			};
 			name = Debug;
 		};
 		A0A7E7DC178F319800A1D5E1 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
 			};
 			name = Release;
 		};
 		A0A7E7DE178F319800A1D5E1 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
 			};
 			name = Debug;
 		};
 		A0A7E7DF178F319800A1D5E1 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
 			};
 			name = Release;
 		};
 		A0A7E7E1178F319800A1D5E1 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
 			};
 			name = Debug;
 		};
 		A0A7E7E2178F319800A1D5E1 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
 			};
 			name = Release;
 		};
 		A0A7E7E4178F319800A1D5E1 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
 			};
 			name = Debug;
 		};
 		A0A7E7E5178F319800A1D5E1 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
 			};
 			name = Release;
 		};
 		A0A7E7E7178F319800A1D5E1 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
 			};
 			name = Debug;
 		};
 		A0A7E7E8178F319800A1D5E1 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
 			};
 			name = Release;
 		};
 		A0A7E7EA178F319800A1D5E1 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
 			};
 			name = Debug;
 		};
 		A0A7E7EB178F319800A1D5E1 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
 			};
 			name = Release;
 		};
 		A0A7E7ED178F319800A1D5E1 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
 			};
 			name = Debug;
 		};
 		A0A7E7EE178F319800A1D5E1 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
 			};
 			name = Release;
 		};

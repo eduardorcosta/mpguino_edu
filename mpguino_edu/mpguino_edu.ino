@@ -45,7 +45,8 @@
  }
  
  */
-
+#define STR_HELPER(x) #x
+#define STR(x) STR_HELPER(x)
 
 ///
 /// @file	mpguino_edu.ino
@@ -65,13 +66,13 @@
 /// @n
 ///
 
-
+#include "Arduino.h"
 #define tankPin   2
 #define voltagePin   1
 
 #define VER 88
-#define VERSION " MPGuino  v0."// + VER1 + "E"
-#include <avr/interrupt.h>
+#define VERSION " MPGuino  v0." STR(VER1) "E"
+#include ///<avr/interrupt.h>
 #include <avr/pgmspace.h>
 #include <avr/eeprom.h>
 typedef uint8_t boolean;

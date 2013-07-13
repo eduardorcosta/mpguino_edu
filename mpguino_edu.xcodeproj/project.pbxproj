@@ -10,7 +10,6 @@
 		A0A7E78A178F319700A1D5E1 /* main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = A0A7E789178F319700A1D5E1 /* main.cpp */; };
 		A0A7E78C178F319700A1D5E1 /* LocalLibrary.cpp in Sources */ = {isa = PBXBuildFile; fileRef = A0A7E78B178F319700A1D5E1 /* LocalLibrary.cpp */; };
 		A0A7E78F178F319700A1D5E1 /* Makefile in Sources */ = {isa = PBXBuildFile; fileRef = A0A7E78E178F319700A1D5E1 /* Makefile */; };
-		A0A7E7F2178F3AA100A1D5E1 /* mpguino_edu.ino in Sources */ = {isa = PBXBuildFile; fileRef = A0A7E7CE178F319800A1D5E1 /* mpguino_edu.ino */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -53,7 +52,7 @@
 		A0A7E7B2178F319700A1D5E1 /* MapleIDE.mk */ = {isa = PBXFileReference; lastKnownFileType = text; name = MapleIDE.mk; path = Makefiles/MapleIDE.mk; sourceTree = "<group>"; };
 		A0A7E7B3178F319700A1D5E1 /* Mpide.mk */ = {isa = PBXFileReference; lastKnownFileType = text; name = Mpide.mk; path = Makefiles/Mpide.mk; sourceTree = "<group>"; };
 		A0A7E7B4178F319700A1D5E1 /* Wiring.mk */ = {isa = PBXFileReference; lastKnownFileType = text; name = Wiring.mk; path = Makefiles/Wiring.mk; sourceTree = "<group>"; };
-		A0A7E7B5178F319700A1D5E1 /* Step1.mk */ = {isa = PBXFileReference; lastKnownFileType = text; name = Step1.mk; path = Makefiles/Step1.mk; sourceTree = "<group>"; };
+		A0A7E7B5178F319700A1D5E1 /* Step1.mk */ = {isa = PBXFileReference; explicitFileType = sourcecode.make; name = Step1.mk; path = Makefiles/Step1.mk; sourceTree = "<group>"; };
 		A0A7E7B6178F319700A1D5E1 /* Step2.mk */ = {isa = PBXFileReference; lastKnownFileType = text; name = Step2.mk; path = Makefiles/Step2.mk; sourceTree = "<group>"; };
 		A0A7E7B7178F319700A1D5E1 /* Teensy.mk */ = {isa = PBXFileReference; lastKnownFileType = text; name = Teensy.mk; path = Makefiles/Teensy.mk; sourceTree = "<group>"; };
 		A0A7E7B8178F319700A1D5E1 /* Teensy2.mk */ = {isa = PBXFileReference; lastKnownFileType = text; name = Teensy2.mk; path = Makefiles/Teensy2.mk; sourceTree = "<group>"; };
@@ -73,10 +72,9 @@
 		A0A7E7C8178F319700A1D5E1 /* pdf.sh */ = {isa = PBXFileReference; lastKnownFileType = text.script.sh; name = pdf.sh; path = Utilities/pdf.sh; sourceTree = "<group>"; };
 		A0A7E7C9178F319800A1D5E1 /* dist.sh */ = {isa = PBXFileReference; lastKnownFileType = text.script.sh; name = dist.sh; path = Utilities/dist.sh; sourceTree = "<group>"; };
 		A0A7E7CA178F319800A1D5E1 /* doxyfile */ = {isa = PBXFileReference; lastKnownFileType = text; name = doxyfile; path = Utilities/doxyfile; sourceTree = "<group>"; };
-		A0A7E7CB178F319800A1D5E1 /* embedXcode_prepare */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.executable"; name = embedXcode_prepare; path = Utilities/embedXcode_prepare; sourceTree = "<group>"; };
 		A0A7E7CC178F319800A1D5E1 /* embedXcode_chrono */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.executable"; name = embedXcode_chrono; path = Utilities/embedXcode_chrono; sourceTree = "<group>"; };
 		A0A7E7CD178F319800A1D5E1 /* TemplateIcon.icns */ = {isa = PBXFileReference; lastKnownFileType = image.icns; name = TemplateIcon.icns; path = Utilities/TemplateIcon.icns; sourceTree = "<group>"; };
-		A0A7E7CE178F319800A1D5E1 /* mpguino_edu.ino */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.objcpp; path = mpguino_edu.ino; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.cpp; };
+		A0A7E87F178F835000A1D5E1 /* mpguino_edu.ino */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.cpp; fileEncoding = 4; path = mpguino_edu.ino; sourceTree = "<group>"; usesTabs = 0; wrapsLines = 0; xcLanguageSpecificationIdentifier = xcode.lang.cpp; };
 /* End PBXFileReference section */
 
 /* Begin PBXGroup section */
@@ -99,12 +97,12 @@
 		A0A7E788178F319700A1D5E1 /* mpguino_edu */ = {
 			isa = PBXGroup;
 			children = (
+				A0A7E87F178F835000A1D5E1 /* mpguino_edu.ino */,
 				A0A7E789178F319700A1D5E1 /* main.cpp */,
 				A0A7E78B178F319700A1D5E1 /* LocalLibrary.cpp */,
 				A0A7E78D178F319700A1D5E1 /* LocalLibrary.h */,
 				A0A7E78E178F319700A1D5E1 /* Makefile */,
 				A0A7E7BC178F319700A1D5E1 /* ReadMe.txt */,
-				A0A7E7CE178F319800A1D5E1 /* mpguino_edu.ino */,
 				A0A7E790178F319700A1D5E1 /* Sketchbook */,
 				A0A7E792178F319700A1D5E1 /* Configurations */,
 				A0A7E7A9178F319700A1D5E1 /* Makefiles */,
@@ -198,7 +196,6 @@
 				A0A7E7C8178F319700A1D5E1 /* pdf.sh */,
 				A0A7E7C9178F319800A1D5E1 /* dist.sh */,
 				A0A7E7CA178F319800A1D5E1 /* doxyfile */,
-				A0A7E7CB178F319800A1D5E1 /* embedXcode_prepare */,
 				A0A7E7CC178F319800A1D5E1 /* embedXcode_chrono */,
 				A0A7E7CD178F319800A1D5E1 /* TemplateIcon.icns */,
 			);
@@ -397,7 +394,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				A0A7E7F2178F3AA100A1D5E1 /* mpguino_edu.ino in Sources */,
 				A0A7E78A178F319700A1D5E1 /* main.cpp in Sources */,
 				A0A7E78C178F319700A1D5E1 /* LocalLibrary.cpp in Sources */,
 				A0A7E78F178F319700A1D5E1 /* Makefile in Sources */,
@@ -409,7 +405,7 @@
 /* Begin XCBuildConfiguration section */
 		A0A7E7CF178F319800A1D5E1 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = A0A7E794178F319700A1D5E1 /* Arduino Duemilanove.xcconfig */;
+			baseConfigurationReference = A0A7E798178F319700A1D5E1 /* Arduino Uno.xcconfig */;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
@@ -419,7 +415,7 @@
 				CLANG_WARN_ENUM_CONVERSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
-				COPY_PHASE_STRIP = NO;
+				COPY_PHASE_STRIP = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
 				GCC_DYNAMIC_NO_PIC = NO;
 				GCC_OPTIMIZATION_LEVEL = 0;
@@ -435,7 +431,7 @@
 					"$(ARDUINO_APP)/**",
 					"$(SKETCHBOOK_DIR)/libraries/**",
 				);
-				MACOSX_DEPLOYMENT_TARGET = 10.8;
+				MACOSX_DEPLOYMENT_TARGET = "";
 				PATH = "$(PATH):$(PROJECT_DIR)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKETCHBOOK_DIR = "";
@@ -464,7 +460,7 @@
 					"$(ARDUINO_APP)/**",
 					"$(SKETCHBOOK_DIR)/libraries/**",
 				);
-				MACOSX_DEPLOYMENT_TARGET = 10.8;
+				MACOSX_DEPLOYMENT_TARGET = "";
 				PATH = "$(PATH):$(PROJECT_DIR)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKETCHBOOK_DIR = "";
@@ -636,7 +632,7 @@
 				A0A7E7D0178F319800A1D5E1 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
+			defaultConfigurationName = Debug;
 		};
 		A0A7E7D1178F319800A1D5E1 /* Build configuration list for PBXLegacyTarget "All" */ = {
 			isa = XCConfigurationList;
@@ -645,6 +641,7 @@
 				A0A7E7D3178F319800A1D5E1 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Debug;
 		};
 		A0A7E7D4178F319800A1D5E1 /* Build configuration list for PBXLegacyTarget "Build" */ = {
 			isa = XCConfigurationList;
@@ -653,6 +650,7 @@
 				A0A7E7D6178F319800A1D5E1 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Debug;
 		};
 		A0A7E7D7178F319800A1D5E1 /* Build configuration list for PBXLegacyTarget "Document" */ = {
 			isa = XCConfigurationList;
@@ -661,6 +659,7 @@
 				A0A7E7D9178F319800A1D5E1 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Debug;
 		};
 		A0A7E7DA178F319800A1D5E1 /* Build configuration list for PBXLegacyTarget "Distribute" */ = {
 			isa = XCConfigurationList;
@@ -669,6 +668,7 @@
 				A0A7E7DC178F319800A1D5E1 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Debug;
 		};
 		A0A7E7DD178F319800A1D5E1 /* Build configuration list for PBXLegacyTarget "Boards" */ = {
 			isa = XCConfigurationList;
@@ -677,6 +677,7 @@
 				A0A7E7DF178F319800A1D5E1 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Debug;
 		};
 		A0A7E7E0178F319800A1D5E1 /* Build configuration list for PBXLegacyTarget "Serial" */ = {
 			isa = XCConfigurationList;
@@ -685,6 +686,7 @@
 				A0A7E7E2178F319800A1D5E1 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Debug;
 		};
 		A0A7E7E3178F319800A1D5E1 /* Build configuration list for PBXLegacyTarget "Upload" */ = {
 			isa = XCConfigurationList;
@@ -693,6 +695,7 @@
 				A0A7E7E5178F319800A1D5E1 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Debug;
 		};
 		A0A7E7E6178F319800A1D5E1 /* Build configuration list for PBXLegacyTarget "Clean" */ = {
 			isa = XCConfigurationList;
@@ -701,6 +704,7 @@
 				A0A7E7E8178F319800A1D5E1 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Debug;
 		};
 		A0A7E7E9178F319800A1D5E1 /* Build configuration list for PBXLegacyTarget "Make" */ = {
 			isa = XCConfigurationList;
@@ -709,6 +713,7 @@
 				A0A7E7EB178F319800A1D5E1 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Debug;
 		};
 		A0A7E7EC178F319800A1D5E1 /* Build configuration list for PBXLegacyTarget "Fast" */ = {
 			isa = XCConfigurationList;
@@ -717,6 +722,7 @@
 				A0A7E7EE178F319800A1D5E1 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Debug;
 		};
 		A0A7E7EF178F319800A1D5E1 /* Build configuration list for PBXNativeTarget "Index" */ = {
 			isa = XCConfigurationList;
@@ -725,6 +731,7 @@
 				A0A7E7F1178F319800A1D5E1 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Debug;
 		};
 /* End XCConfigurationList section */
 	};

@@ -72,7 +72,7 @@
 
 #define VER 88
 #define VERSION " MPGuino  v0." STR(VER1) "E"
-#include ///<avr/interrupt.h>
+#include <avr/interrupt.h>
 #include <avr/pgmspace.h>
 #include <avr/eeprom.h>
 typedef uint8_t boolean;
@@ -370,8 +370,8 @@ public:
     unsigned long idleGallons(); //how many gallons spent at 0 mph?
     void update(Trip t);
     void reset();
-    void save();
-    void load();
+//    void save();
+//    void load();
     Trip();
 };
 
@@ -580,11 +580,12 @@ void mainloop(void) {
     // TODO: Mainloop
     if (newRun != 1)
         initGuino();//go through the initialization screen
+    /*
 #ifdef SAVE_TANK
     else
         tank.load();
 #endif
-    
+    */
     unsigned long lastActivity = microSeconds();
     unsigned long tankHold; //state at point of last activity
     while (true) {
@@ -633,9 +634,11 @@ void mainloop(void) {
                 LCD::print("                ");
                 //        analogWrite(BrightnessPin,brightness[0]);    //nitey night
                 OCR1A = brightness[0];
+                /*
 #ifdef SAVE_TANK
                 tank.save();
 #endif
+                 */
                 lastActivity = nil;
             }
         }
@@ -675,9 +678,11 @@ void mainloop(void) {
             else if (!(buttonState & mbuttonBit) && !(buttonState&rbuttonBit)) {// right and middle = current reset
                 current.reset();
                 LCD::print(getStr(PSTR("Current Reset ")));
+                /*
 #ifdef SAVE_TANK
                 tank.save();
 #endif
+                 */
             }
             else if (!(buttonState & lbuttonBit)) { //left is rotate through screeens to the left
                 if (screen != 0)
@@ -863,6 +868,9 @@ void doDisplayCurrentTripData(void) {
 void doDisplayTankTripData(void) {
     tDisplay(&tank);
 } //display tank trip formatted data.
+
+
+
 void doDisplaySystemInfo(void) {
     LCD::gotoXY(0, 0);
     LCD::print("C%");
@@ -1457,10 +1465,10 @@ unsigned long Trip::time() {
     //  return seconds*1000;
     byte d = 60;
     unsigned long seconds = loopCount / loopsPerSecond;
-    //  if(seconds/60 > 999) d = 3600; //scale up to hours.minutes if we get past 999 minutes
+    if(seconds/60 > 999) d = 3600; //scale up to hours.minutes if we get past 999 minutes
     return ((seconds / d) * 1000) + ((seconds % d) * 10);
 }
-
+/*
 void Trip::save() {
     byte inicio = parmsLength+4;
     byte classSize = 9;
@@ -1603,7 +1611,7 @@ void Trip::load() { //return 1 if loaded ok
     
     
 }
-
+*/
 void Trip::reset() {
     loopCount = 0;
     injPulses = 0;
@@ -1950,9 +1958,12 @@ void editParm(byte parmIdx) {
 }
 
 void initGuino() { //edit all the parameters
+    
+/*
 #ifdef SAVE_TANK
     tank.save();
 #endif
+ */
     for (int x = 0; x < parmsLength; x++)
         editParm(x);
     save();
